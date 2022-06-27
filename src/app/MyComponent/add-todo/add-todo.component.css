@@ -1,0 +1,16 @@
+form{
+    width: 50%;
+    position: relative;
+    left: 20rem;
+    margin: 1rem;
+}
+
+h3{
+    position: relative;
+    left: 20rem;
+    margin: 1rem;
+}
+
+input{
+    margin-bottom: 1rem;
+}
