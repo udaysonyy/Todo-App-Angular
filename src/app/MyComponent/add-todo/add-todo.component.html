@@ -1,14 +1,13 @@
-<h3>Add Task</h3>
-<div class="add-todo-box my-3">
-  <form #add="ngForm" (ngSubmit) = "onSubmit()" (ngSubmit) = "complete(add)">
-    <div class="form-group">
+<div class="container-fluid text-center">
+<div>
+  <form #addForm="ngForm" (ngSubmit)="onSubmit()" (ngSubmit)="resetForm(addForm)">
+    <div class="add-box form-group mx-3 my-3 text-center">
       <!-- <label for="title">Title</label> -->
-      <input type="text" [(ngModel)]="title" name="title" class="form-control" id="title" aria-describedby="title" placeholder="Enter Title">
+      <input type="text"[(ngModel)]="title" name="title" class="form-control" id="title" aria-describedby="title" [placeholder]="titletext">
     </div>
-    <div class="form-group">
-      <!-- <label for="Desc">Description</label> -->
-      <input type="text" [(ngModel)]="desc" name="desc"class="form-control" id="Desc" placeholder="Enter Description">
-    </div>
-    <button type="submit" class="btn btn-primary">Add Task</button>
+    <!-- <h1>{{titletext.valid}}</h1>
+    <h1>{{titletext.untouched}}</h1> -->
+    <button type="submit" class="btn btn-primary mb-1 mx-3">Add Task</button>
   </form>
+</div>
 </div>

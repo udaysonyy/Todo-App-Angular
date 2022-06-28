@@ -3,22 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodosComponent } from './MyComponent/todos/todos.component';
+import { HomeComponent } from './MyComponent/Home/home.component';
 import { TodoItemsComponent } from './MyComponent/todo-items/todo-items.component';
 import { AddTodoComponent } from './MyComponent/add-todo/add-todo.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { NavigationComponent } from './MyComponent/navigation/navigation.component';
+import { ErrorComponent } from './MyComponent/error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent,
+    HomeComponent,
     TodoItemsComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    NavigationComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

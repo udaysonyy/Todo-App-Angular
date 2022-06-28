@@ -1,16 +1,5 @@
-form{
-    width: 50%;
-    position: relative;
-    left: 20rem;
-    margin: 1rem;
+.add-box{
+    display: inline-block;
+    width: 40%;
 }
 
-h3{
-    position: relative;
-    left: 20rem;
-    margin: 1rem;
-}
-
-input{
-    margin-bottom: 1rem;
-}

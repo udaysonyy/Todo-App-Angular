@@ -1,14 +1,21 @@
-.todo-box{
-    display:inline-block;
-    position: relative;
-    left: 20rem;
-    margin: 1rem;
-}
-
-label, h5, p{
-    margin-bottom: 0.5rem;
-}
-
 .strike{
     text-decoration: line-through;
+}
+
+.content-box:hover{
+    box-shadow: 0 0.1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.todo-box{
+    width: 57.5%;
+    text-align: left;
+}
+
+h5, .todo-check{
+    display: inline-block;
+}
+
+.todo-check, .btn{
+    position: relative;
+    float: right;
 }

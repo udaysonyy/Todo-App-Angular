@@ -1,5 +1,4 @@
-export class Todo{
+export class Task{
     title: string
-    desc: string
     active: boolean
 }

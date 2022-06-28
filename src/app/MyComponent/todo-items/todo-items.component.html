@@ -1,10 +1,11 @@
-<div class="todo-box">
-    <h5 [ngClass]="{'strike' : !todo.active}">{{todo.title}}</h5>
-    <p [ngClass]="{'strike' : !todo.active}">{{todo.desc}}</p>
-    <div class="todo-check">
-        <input class="todo-check-input" type="checkbox" value="" id="todo{{i}}" (click)="strike(todo)" [checked]="!todo.active">
-        <label class="todo-check-label" for="todo{{i}}">Done
-        </label>
-      </div>
-    <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+<div class="container todo-box">
+  <div class="content-box my-2 px-2 py-2 border border-light rounded">
+    <h5 name="todo" [ngClass]="{'strike' : !todo.active}">{{todo.title}}</h5>
+    <button class="btn btn-sm btn-danger mb-2" (click)="onClick(todo)">Delete</button>
+    <div class="todo-check mx-2">
+        <!-- <input class="todo-check-input" type="checkbox" value="" id="todo{{i}}" (click)="strike(todo)" [checked]="!todo.active">
+        <label class="todo-check-label" for="todo{{i}}">Done</label> -->
+        <button name="todo" id="todo{{i}}" class="btn btn-sm btn-primary" (click)="strike(todo)">Done</button>
+    </div>
+  </div>
 </div>

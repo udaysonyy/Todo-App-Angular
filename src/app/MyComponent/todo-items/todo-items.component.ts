@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Todo } from 'src/app/Todo';
+import { Task } from 'src/app/Models/Task';
 
 @Component({
   selector: 'app-todo-items',
@@ -8,20 +8,20 @@ import { Todo } from 'src/app/Todo';
 })
 export class TodoItemsComponent implements OnInit {
   @Input() i : number;
-  @Input() todo: Todo;
-  @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
-  @Output() strikeout: EventEmitter<Todo> = new EventEmitter();
+  @Input() todo: Task;
+  @Output() deleteTodo: EventEmitter<Task> = new EventEmitter();
+  @Output() strikeout: EventEmitter<Task> = new EventEmitter();
   constructor() { }
 
   
   ngOnInit(): void {
   }
   
-  onClick(todo: Todo){
+  onClick(todo: Task){
     this.deleteTodo.emit(todo);
   }
 
-  strike(todo: Todo){
+  strike(todo: Task){
     this.strikeout.emit(todo);
   }
 }

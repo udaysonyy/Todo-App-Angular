@@ -1,8 +1,0 @@
-<app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
-<div class="no-msg" *ngIf="this.Todos.length === 0; else elseBlock"><b>No Task Available</b>
-</div>
-<ng-template #elseBlock>
-<div *ngFor="let todo of Todos; let i = index">
-    <app-todo-items [todo]="todo" [i]="i" (deleteTodo)="todoDelete($event)" (strikeout)="strikefont($event)"></app-todo-items>
-</div>
-</ng-template>

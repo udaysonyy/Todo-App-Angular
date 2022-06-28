@@ -1,40 +1,33 @@
-import { compileClassMetadata } from '@angular/compiler';
-import { NgForm } from '@angular/forms'
+// import { compileClassMetadata } from '@angular/compiler';
+import { FormsModule, FormControl, ReactiveFormsModule, Validators, FormGroup, NgForm } from '@angular/forms'
 import { Output, Component, EventEmitter, OnInit } from '@angular/core';
-import { Todo } from 'src/app/Todo';
+import { Task } from 'src/app/Models/Task';
+
 
 @Component({
   selector: 'app-add-todo',
   templateUrl: './add-todo.component.html',
   styleUrls: ['./add-todo.component.css']
 })
-export class AddTodoComponent implements OnInit {
-  title: string
-  desc: string
+export class AddTodoComponent{
+  title: string;
+  titletext = "Enter Task (Less than 30 characters)";
 
-  @Output() todoAdd: EventEmitter<Todo> = new EventEmitter();
+  @Output() todoAdd: EventEmitter<Task> = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-  
   onSubmit(){
-    const todo = {
-      title : this.title,
-      desc : this.desc,
-      active : true
+    if(this.title.length != 0 && this.title.length < 30){
+      const todo = {
+        title : this.title,
+        active : true
+      }
+      this.todoAdd.emit(todo);
     }
-
-    this.todoAdd.emit(todo);
   }
 
-  complete(add: NgForm){
+  resetForm(add: NgForm){
     add.reset();
   }
-
 }
-function output() {
-  throw new Error('Function not implemented.');
-}
-
