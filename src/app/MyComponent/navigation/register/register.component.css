@@ -1,0 +1,11 @@
+.lgform{
+    margin-top: 2%;
+    height: 100%;
+    display: flexbox;
+    /* justify-content: center; */
+    width: 30%;
+}   
+
+.sbtn{
+    text-align: center;
+}

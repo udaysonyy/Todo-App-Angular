@@ -9,6 +9,9 @@ import { AddTodoComponent } from './MyComponent/add-todo/add-todo.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NavigationComponent } from './MyComponent/navigation/navigation.component';
 import { ErrorComponent } from './MyComponent/error/error.component';
+import { LoginComponent } from './MyComponent/navigation/login/login.component';
+import { RegisterComponent } from './MyComponent/navigation/register/register.component';
+import { LogoutComponent } from './MyComponent/navigation/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ErrorComponent } from './MyComponent/error/error.component';
     TodoItemsComponent,
     AddTodoComponent,
     NavigationComponent,
-    ErrorComponent
+    ErrorComponent,
+    LoginComponent,
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
