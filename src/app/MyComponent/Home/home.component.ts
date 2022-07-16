@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
 
   addTodo(todo: Task){
     // console.log(todo);
-    this.Todos.push(todo);
+    this.Todos.unshift(todo);
     localStorage.setItem('Todos', JSON.stringify(this.Todos))
   }
 
